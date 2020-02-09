@@ -1,0 +1,498 @@
+* Tutorial
+** TODO 
+*** следуший урок
+*** сделать гит репозиторий
+*** опубликовать гит репозиторий
+*** разобратся с на весь экран  
+как шрифт а не смена разрения
+*** dont now how to lunch in debuger
+****  xperement with win gui app
+cd D:\Development\version-control\GitHub\GooglePy\SRC 
+** Pathes 
+*** to org
+cd D:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc 
+*** main  
+ 
+** Project Structures
+*** main
+**** Have
+#+BEGIN_SRC elisp
+(find-file "D:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/engine.py")
+#+END_SRC
+**** use loader_functions.initialize_new_game 
+ initialize_new_game.py
+#+BEGIN_SRC elisp
+(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/loader_functions/initialize_new_game.py")
+#+END_SRC
+for get_constants, get_game_variables
+**** use loader_functions.data_loaders 
+***** have 
+ load_game, save_game, save_char, load_char, save_citadel, load_citadel, import_char
+ #+BEGIN_SRC elisp
+ (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/loader_functions/data_loaders.py")
+ #+END_SRC
+**** use  entity.py
+(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/entity.py")
+*** sandbox.py
+(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/sandbox.py")
+*** без понятия откуда
+**** game_map.py
+(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/map_objects/game_map.py")
+***** use random_utils.py 
+(find-file "D:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/random_utils.py")
+** Project Setings
+#+BEGIN_SRC elisp
+(elpy-set-project-root "D:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/")
+#+END_SRC
+#+BEGIN_SRC eshell
+which virtualenv
+#+END_SRC
+
+#+RESULTS:
+
+#+BEGIN_SRC eshell results: output
+ls
+cd ../SRC/
+ls
+#+END_SRC
+
+#+RESULTS:
+: #engine.py#  arial10x10.png  death_functions.py  entity.py         game_messages.py  input_handlers.py  loader_functions  menu_background1.png  render_functions.py  save
+: __pycache__  components      engine.py           fov_functions.py  game_states.py    item_functions.py  map_objects       menus.py              sandbox.py           
+
+ +BEGIN_SRC eshell results: output
+#+BEGIN_SRC eshell results: values
+which virtualenv
+#+END_SRC
+
+#+RESULTS:
+* описание
+** cooridors
+*** curved cooridors caves wallls 
+     / / | |  | |  |%|
+     \ \ | |  |+|  |-|  
+     /`/ | |  | |  | |    
+	/ /  / \
+     /
+*** doors 
+**** closed
+ -
+	###-##                          
+	#                                 
+	-                                 
+	#                                 
+	#\                                 
+	###-##                          
+	#                                 
+	-                                 
+	#                                 
+                                     
+                                     
+
+   в тактическом
+ ---    -
+		- 
+		- 
+
+**** open
+ `
+   в тактическом
+ ```   `
+       `
+       `
+** commands 
+*** проежект фаилс
+** obgect  
+*** daed body cutopen o motulated
+				|%|
+				|+|  |-|  
+				| |  | |    
+	/ /
+                                                     
+*** normal dead
+ is samr simbol onli graed and dimed
+                                                     
+*** множественые предметы в одной ячейке
+	отображаутся цифрой и цветом
+	приоцень большом значение добовляется цвет задника
+** tactical veawe
+*** обзор
+ все ентии в этом режим представлены своими большими и малыми символами в маштабе человеческого полушага
+				zZz                                   
+ антропоморфы соответсвено стоят в плокости и наобород собака
+				d
+				D
+ В тоже время маленекая собак останится
+		d
+*** commbat
+   
+ предстовлят бой за контроль на поверхностями если фигуры стоят в плотнуд это значит одна фигуры схватила другую
+				Zz
+               z0@!                                   
+ так происходит бой видно что персонаж вооружон большим крглым шитом и мечём а замбоид когтями что видно по смене цвета котролируемых монстром тайлов окррашеных в яркий цвет монстра а не тусклый
+				,,,                                   
+				,z,                                   
+				...                                   
+				0@!                                   
+				...                                   
+*** моды и модификаторы
+	каждое нажатие модификационый кнопки изменяет видимость на определёные изменения
+	показ зон котроля
+ или предметов на полу
+ или интерера
+*** поочерёдность ходов
+ все ходят одновременно
+ ты планируеш свой следуший ход список твоих действий перечислен в панели
+ по принципу длительностей действий и некоторые действия соответвенно могут заимать больше чем один ход
+ ты можеш планировать действие повторить последнее или одно действие один ход
+ ещё стоит использовать уневерсальные сценарии
+ как панель быстрого доступа или кнопки тоесть такой сценарий расчитан как правило на один ход
+*** авто тактик 
+ если держать модификатор не будет происходит перезоод в тактик
+ и будет авто резолв
+** всё построено вокруг смены режимов как вайм
+** в нормальном виде не тактическом
+ одна клетка соответствует матрице соответственно из 3х3
+** видемость и поворот персонажа орентация
+*** орентация
+ орентацию легко определить поскольку пересонаж перемешается так чтоб за его спиной оказивалась 1\4 вида
+ тоесть при повороте на запад он перемешается к середине правой стороны 
+ а при орентации на юг оказывается ближе к верхней границе экрана
+*** екран
+ сам екран квадратный чтоб обеспечить равность положения и глубены обзора
+*** видемость
+**** если ночь или темно
+ затухает в дали от пересонажа пока не начинает отображатся слегка видимыми слеваюшими с фоном обектами
+ предмет рядом с источником света может создовать свою зону светимости вокруг себя
+**** днём
+ днем эфект мало зметен
+** commbat
+ попробывать  добавить елементы из нео сканвежира
+ доступный список действий на основе ситуации
+*** максимизировать мад ошушени откомбота
+**** много текста
+**** текст литературный
+**** текст окрашен в разные цвета для отмечания эфекта
+**** результа каждого действия это не попа или промах а описание что случилось
+**** возможность открыть расчет результатов
+** по возможности добавить звуки
+*** орентироватся на дяблу
+** перенесено
+***** модальность управления
+***** механизмы интелекта варуешегоиз книг
+***** мадовай мод
+***** мод движения
+** описать Рогаль симулятор слойной
+*** слои
+**** каждый елемент слой
+*** списки
+**** обекты не слои а список 
+**** история на бор списков событий
+***** посторен город
+***** разрушин
+***** погибло много герое
+***** пониб легендарный герой
+*** игры состовляюшие
+**** симулинг 
+	 взять росто интелекта
+ открытие технологии на основе вероятности и наличия рядоб элемента
+**** ворлд супер бокс
+**** мегик карпет
+**** дварф фортрес
+**** отличие 
+***** земеля круглая
+***** 3д шар 
+***** возможность развивать технологии или магию  
+* LP
+** py src block activation from org
+*** lisp code to activate py
+   #+BEGIN_SRC elisp
+(setq org-confirm-babel-evaluate nil)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((python . t)))
+(message "Pyton in org turned on")
+   #+END_SRC
+
+   #+RESULTS:
+   : Pyton in org turned on
+
+*** Header Arguments
+Language-Specific Header Arguments
+
+    :results {output, value}: Value mode is the default (as with other languages). In value mode you can use the following subtypes:
+        raw: value is inserted directly
+        pp: value is pretty-printed by python using pprint.pformat(%s), then inserted
+        file: value is interpreted as a filename to be interpolated when exporting; commonly used for graphics output.
+    :preamble: Preamble code, inserted before the body (not commonly used). Default is none.
+    :return: Value to return (only when result-type is value, and not in session mode; not commonly used). Default is None; in non-session mode use return() to return a value.
+    :python: Name of the command for executing Python code.
+
+Common Header Arguments
+
+    :session [name]: default is no session.
+    :var data=data-table: Variables can be passed into python from org-mode tables as scalars or lists. See the org-mode manual for more details.
+    :exports {code, results, both, none}: Standard babel option for what to export.
+
+   
+*** Result Types
+    value: Value results are the value of the last expression evaluated in the code block. This is found in session mode using using the "_" special python interpreter variable.
+    output: Output results come from whatever the python code prints on stdout.
+*** Exempls
+**** my
+#+BEGIN_SRC python
+print ("hi")
+
+#+END_SRC
+
+#+RESULTS:
+: None
+
+
+#+begin_src python :results output
+print ("Hello, world!")
+#+end_src
+
+#+RESULTS:
+: Hello, world!
+
+**** Inline calling:
+Two plus two equals src_python{return(2+2)}
+
+when exported, e.g. to HTML or LaTeX/PDF, becomes:
+
+Two plus two equals 4
+**** Extracting data from an org-mode table
+#+tblname: data_table
+| a | 1 |
+| b | 2 |
+| c | 3 |
+#+begin_src python :var val=1 :var data=data_table
+# Return row specified by val.
+# In non-session mode, use return to return results.
+return(data[val])
+#+end_src
+
+#+RESULTS:
+| b | 2 |
+
+
+**** Plotting
+#+begin_src python :results file
+import matplotlib, numpy
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+fig=plt.figure(figsize=(4,2))
+x=numpy.linspace(-15,15)
+plt.plot(numpy.sin(x)/x)
+fig.tight_layout()
+plt.savefig('images/python-matplot-fig.png')
+return 'images/python-matplot-fig.png' # return filename to org-mode
+#+end_src
+
+#+RESULTS:
+[[file:images/python-matplot-fig.png]]
+
+python-matplot-fig.png
+**** utf-8 strings to python
+You need some care in order to pass utf-8 strings to python.
+passing utf-8 strings to python
+#+NAME: unicode_str
+#+BEGIN_EXAMPLE
+“this string is not ascii!”
+#+END_EXAMPLE
+***** Will produce no output
+#+NAME: error-in-passing-var
+#+BEGIN_SRC python :var data=unicode_str
+return data
+#+END_SRC
+
+#+RESULTS: error-in-passing-var
+
+Will produce no output and prints the following message in the buffer *Org-Babel Error Output*:
+
+  File "<stdin>", line 3
+SyntaxError: Non-ASCII character '\xe2' in file <stdin> on line 3, but no encoding declared; see http://www.python.org/peps/pep-0263.html for details
+***** passing utf-8 strings to python with workaround
+A workaround is to use :preamble with the value # -*- coding:utf-8 -*-
+
+#+NAME: ok-in-passing-var
+#+BEGIN_SRC python :preamble "# -*- coding: utf-8 -*-" :var data=unicode_str
+return data
+#+END_SRC
+
+#+RESULTS: ok-in-passing-var
+: this string is not ascii!
+
+
+
+** cmd src block activation from org
+*** lisp code to activate cmd
+   #+BEGIN_SRC elisp
+(require 'ob-shell)
+(setq org-confirm-babel-evaluate nil)
+(org-babel-do-load-languages 'org-babel-load-languages '((shell . t)))
+
+(message "shell in org turned on")
+   #+END_SRC
+   #+RESULTS:
+   : shell in org turned on
+*** Exempls
+**** my
+#+BEGIN_SRC shell :results output
+rem sadfasdf 
+
+#+END_SRC
+
+#+RESULTS:
+: Microsoft Windows [Version 6.1.7601]
+: (c) Êîðïîðàöèÿ Ìàéêðîñîôò (Microsoft Corp.), 2009. Âñå ïðàâà çàùèùåíû.
+: 
+: d:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc>Ïðîäîëæèòü? 
+
+#+begin_src python :results output
+print ("Hello, world!")
+#+end_src
+#+RESULTS:
+: Hello, world!
+**** cmdproxy
+   #+BEGIN_SRC elisp
+(require 'ob-shell)
+(defadvice org-babel-sh-evaluate (around set-shell activate)
+  "Add header argument :shcmd that determines the shell to be called."
+  (let* ((org-babel-sh-command (or (cdr (assoc :shcmd params)) org-babel-sh-command)))
+  ad-do-it
+    ))
+   #+END_SRC
+
+   #+RESULTS:
+   : org-babel-sh-evaluate
+
+#+BEGIN_SRC shell :shcmd "cmdproxy.exe" :results output
+dir>>log.txt
+#+END_SRC
+
+#+RESULTS:
+: Microsoft Windows [Version 6.1.7601]
+: (c) Êîðïîðàöèÿ Ìàéêðîñîôò (Microsoft Corp.), 2009. Âñå ïðàâà çàùèùåíû.
+: 
+: d:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc>Ïðîäîëæèòü? 
+
+**** sh
+#+BEGIN_SRC shell :results output 
+ls 
+
+#+END_SRC
+
+#+RESULTS:
+: Microsoft Windows [Version 6.1.7601]
+: (c) Êîðïîðàöèÿ Ìàéêðîñîôò (Microsoft Corp.), 2009. Âñå ïðàâà çàùèùåíû.
+: 
+: d:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc>Ïðîäîëæèòü? 
+
+
+#+BEGIN_SRC eshell :results output 
+ls 
+
+#+END_SRC
+**** eshell
+#+BEGIN_SRC eshell :results output 
+ls 
+
+#+END_SRC
+
+#+RESULTS:
+: Microsoft Windows [Version 6.1.7601]
+: (c) Êîðïîðàöèÿ Ìàéêðîñîôò (Microsoft Corp.), 2009. Âñå ïðàâà çàùèùåíû.
+: 
+: d:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc>Ïðîäîëæèòü? 
+
+
+#+BEGIN_SRC eshell :results output 
+ls 
+
+#+END_SRC
+**** Other
+(make-comint-in-buffer "cmd" nil "cmd" nil)
+(shell)
+(eshell)
+(cmd-shell)
+(defun run-cmdexe ()
+      (interactive)
+      (let ((shell-file-name "cmd.exe"))
+            (shell "*cmd.exe*")))
+(defun run-bash ()
+      (interactive)
+      (let ((shell-file-name "D:\\Development\\version-control.APP\\Git\\bin\\bash.exe"))
+            (shell "*bash*")))
+** eshell src block activation from org
+*** lisp code to activate cmd
+   #+BEGIN_SRC elisp
+	 (require 'ob-eshell)
+	 (org-babel-do-load-languages 'org-babel-load-languages '((eshell . t)))
+
+	 (message "shell in org turned on")
+   #+END_SRC
+   #+RESULTS:
+   : shell in org turned on
+*** without ob-eshell
+   #+BEGIN_SRC elisp
+(defun org-babel-execute:eshell (body _params)
+  (with-temp-buffer
+    (eshell-command body t)
+    (buffer-string)))
+
+	 (message "shell in org turned on")
+   #+END_SRC
+
+   #+RESULTS:
+   : shell in org turned on
+
+   #+BEGIN_SRC eshell
+echo $emacs-version
+#+END_SRC
+
+#+RESULTS:
+: 26.2
+
+*** Exempls
+**** my
+#+BEGIN_SRC eshell :results output 
+ls
+#+END_SRC
+#+RESULTS:
+: #nots.org#  ecran.txt  nots.org  nots.org~
+#+BEGIN_SRC eshell  :results output
+echo ls 
+#+END_SRC
+#+RESULTS:
+: ls
+**** eshell
+***** standart 
+#+begin_src eshell
+(setq hello-world "hello, world")
+echo $hello-world
+#+end_src
+#+RESULTS:
+: hello, world
+***** Support variables assignment
+#+begin_src eshell :var name="stardiviner"
+echo "hello, " $name
+#+end_src
+#+RESULTS:
+: ("hello, " "stardiviner")
+***** Support session
+#+begin_src eshell :session *kk*
+(setq hello-world "hello, world")
+(setq hello-stardiviner "hello, stardiviner")
+echo $hello-stardiviner 
+#+end_src
+#+RESULTS:
+: hello, stardiviner
+
+#+begin_src eshell :session *kk*
+echo $hello-world
+#+end_src
+#+RESULTS:
+: hello, world
+
