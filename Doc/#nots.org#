@@ -64,7 +64,7 @@ from components.inventory import Inventory
 **** use equipment.py
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/components/equipment.py")
 ***** use equipment_slots.py
-(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/equipment_slot.py")
+(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/equipment_slots.py")
 **** use game_states.py
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/game_states.py.py")
 from game_states import GameStates
