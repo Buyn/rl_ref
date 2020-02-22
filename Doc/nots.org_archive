@@ -138,3 +138,46 @@ cd D:\Development\version-control\GitHub\GooglePy\SRC
   :ARCHIVE_CATEGORY: nots
   :ARCHIVE_TODO: DONE
   :END:
+
+* DONE разница игры цитадели от обычной
+  CLOSED: [2020-02-22 Сб 14:24]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-22 Сб 14:24
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches/ситадель из одной игры
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE методом сохранения
+  CLOSED: [2020-02-22 Сб 14:24]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-22 Сб 14:24
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches/ситадель из одной игры
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE методы решения 
+  CLOSED: [2020-02-22 Сб 14:24]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-22 Сб 14:24
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches/ситадель из одной игры
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+** обеспечить передачу в игру показателя
+*** цитадель
+** сохранять взависимости от значения 
+
+* DONE обеспечить запуск с файлом мира цитадели
+  CLOSED: [2020-02-22 Сб 14:24]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-22 Сб 14:25
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches/ситадель из одной игры
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
