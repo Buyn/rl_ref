@@ -1,0 +1,102 @@
+# Этот файл viminfo автоматически создан Vim 8.1.
+# Его можно (осторожно!) редактировать.
+
+# Viminfo version
+|1,4
+
+# Значение опции 'encoding' в момент записи файла
+*encoding=utf-8
+
+
+# hlsearch on (H) or off (h):
+~h
+# Командная строка, история (начиная от свежего к старому):
+
+# Строка поиска, история (начиная от свежего к старому):
+
+# Выражение, история (начиная от свежего к старому):
+
+# Строка ввода, история (начиная от свежего к старому):
+
+# Строка отладки, история (начиная от свежего к старому):
+
+# Регистры:
+
+# Глобальные отметки:
+'0  1  6  /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+|4,48,1,6,1564146171,"/f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG"
+'1  1  0  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,49,1,0,1564012355,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+'2  1  0  /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+|4,50,1,0,1563920234,"/f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG"
+'3  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,51,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+'4  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,52,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+
+# Список прыжков (сначала более свежие):
+-'  1  6  /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+|4,39,1,6,1564146171,"/f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG"
+-'  1  0  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,0,1564012355,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  0  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,0,1564012355,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  0  /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+|4,39,1,0,1563920234,"/f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG"
+-'  1  0  /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+|4,39,1,0,1563920234,"/f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  12  /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+|4,39,1,12,1563789750,"/f/Dev/Src/Toch/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+-'  1  19  /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+|4,39,1,19,1563788181,"/f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG"
+
+# История местных отметок (от более свежих к старым):
+
+> /f/Dev/Src/sloeber-workspace/.git/COMMIT_EDITMSG
+	*	1564146167	0
+	"	1	6
+	^	1	7
+	.	1	6
+	+	1	6
+
+> /f/Dev/Emacs/Home/Emacsini/.git/COMMIT_EDITMSG
+	*	1564012344	0
+	"	1	0
+	^	1	19
+	.	1	18
+	+	1	18
+
+> /f/Dev/Src/Toch/.git/COMMIT_EDITMSG
+	*	1563789747	0
+	"	1	12
+	^	1	13
+	.	1	12
+	+	1	12

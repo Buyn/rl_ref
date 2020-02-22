@@ -95,7 +95,6 @@ def main(): # {{{
                     show_load_error_message = True
                     show_main_menu = False
                     game_state = GameStates.PLAYERS_TURN
-                #  }}}
 # ***** exit_game  {{{:
             elif exit_game:#   {{{
                 break
@@ -106,18 +105,20 @@ def main(): # {{{
             libtcod.console_clear(con)
 # ****  start citadel game  {{{:
             if citadel:
-                play_citadel(player, entities, game_map, message_log,
-                      game_state, con, panel, constants)
+                # play_citadel(player, entities, game_map, message_log,
+                #       game_state, con, panel, constants)
+                play_game(player, entities, game_map, message_log,
+                          game_state, con, panel, constants, citadel)
 # ****  start continue game  {{{:
             else:
                 play_game(player, entities, game_map, message_log,
-                      game_state, con, panel, constants)
+                          game_state, con, panel, constants, citadel)
             citadel = False
             show_main_menu = True
 
 
 # * play_game:
-def play_game(player, entities, game_map, message_log, game_state, con, panel, constants):#   {{{
+def play_game(player, entities, game_map, message_log, game_state, con, panel, constants, citadel):#   {{{
 # ** Inits Main Loop  {{{:
 # *** FOV {{{:
     fov_map = initialize_fov(game_map)
@@ -280,8 +281,12 @@ def play_game(player, entities, game_map, message_log, game_state, con, panel, c
                     'targeting_cancelled': True})
 # ****** save game & exit }}}:
             else:
-                save_game(player, entities, game_map,
-                          message_log, game_state)
+                if citadel : 
+                    save_citadel(player, entities, game_map,
+                            message_log, game_state)
+                else: 
+                    save_game(player, entities, game_map,
+                            message_log, game_state)
                 save_char(player, entities)
                 return True
         #  }}}
@@ -538,7 +543,6 @@ def play_citadel(player, entities, game_map, message_log, game_state, con, panel
                           message_log, game_state)
                 save_char(player, entities)
                 game_state = previous_game_state
-                
                 return True
         #  }}}
         if fullscreen: # Folding {{{
