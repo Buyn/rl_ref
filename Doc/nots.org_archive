@@ -181,3 +181,41 @@ cd D:\Development\version-control\GitHub\GooglePy\SRC
   :ARCHIVE_CATEGORY: nots
   :ARCHIVE_TODO: DONE
   :END:
+
+* DONE ситадель из одной игры
+  CLOSED: [2020-02-22 Сб 14:38]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-22 Сб 14:38
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+** DONE за рефакторить 
+   CLOSED: [2020-02-22 Сб 14:38]
+*** DONE убрать функцию ситадели
+	CLOSED: [2020-02-22 Сб 14:38]
+*** DONE разделения в менюс запуска  
+	CLOSED: [2020-02-22 Сб 14:38]
+
+* DONE запустить ЕЛПЙ
+  CLOSED: [2020-02-23 Вс 13:45]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-23 Вс 13:45
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+
+* DONE добавить тесты
+  CLOSED: [2020-02-28 Пт 21:54]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-02-28 Пт 21:54
+  :ARCHIVE_FILE: f:/Dev/Src/Rogalik/rl_ref/Doc/nots.org
+  :ARCHIVE_OLPATH: new Fiches
+  :ARCHIVE_CATEGORY: nots
+  :ARCHIVE_TODO: DONE
+  :END:
+** написать прогу создаюшую фалы
+сможем понят там ли он насамом деле

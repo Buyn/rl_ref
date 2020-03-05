@@ -4,11 +4,6 @@
 	удалить фаил
 	чар из папки сейвов
 если файла  нет игра создаст нового
-** Pathes 
-*** to org
-cd D:\Development\version-control\GitHub\Tutorial-Mod\Roguelike_tutorial\Doc 
-*** main  
- 
 ** Project Structures
 *** main
 **** Have
@@ -51,7 +46,7 @@ from components.inventory import Inventory
 ****** use equipment.py
   (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/components/equipment.py")
 **** use equipment.py
-(find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/components/equipment.py")
+(find-file "../SRC/components/equipment.py")
 ***** use equipment_slots.py
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/equipment_slot.py")
 **** use game_states.py
@@ -64,7 +59,61 @@ from game_states import GameStates
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/menus.py")
 from menus import main_menu, message_box
 *** sandbox.py
+(find-file "../SRC/sandbox.py")
+(find-file-other-frame "../SRC/sandbox.py")
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/sandbox.py")
+*** tests.py
+**** tests ../tests/sandbox
+ (find-file-other-frame "../tests/sandbox/test_sandbox.py")
+ (find-file "../tests/sandbox/test_sandbox.py")
+**** tests src
+ (find-file "../SRC/test_sandbox.py")
+ (find-file-other-frame "../SRC/test_sandbox.py")
+**** tests ..
+ (find-file-other-frame "../test_sandbox.py")
+ (find-file "../test_sandbox.py")
+**** tests ../tests
+ (find-file-other-frame "../tests/test_sandbox.py")
+ (find-file "../tests/test_sandbox.py")
+**** tutexempl
+ (find-file "../test_sandbox.py")
+ (find-file "../test.py")
+***** doc
+****** struct
+project/
+│
+├── my_sum/
+│   └── __init__.py
+|
+└── test.py
+
+****** test src
+ (find-file "../exempl/test.py")
+from my_sum import sum
+
+
+class TestSum(unittest.TestCase):
+    def test_list_int(self):
+        """
+        Test that it can sum a list of integers
+        """
+        data = [1, 2, 3]
+        result = sum(data)
+        self.assertEqual(result, 6)
+
+if __name__ == '__main__':
+    unittest.main()
+
+****** file src
+Open up my_sum/__init__.py and create a new function called sum(), which takes an
+iterable (a list, tuple, or set) and adds the values together:
+ (find-file "../exempl/my_sum/__init__.py")
+def sum(arg):
+    total = 0
+    for val in arg:
+        total += val
+    return total
+
 *** без понятия откуда
 **** use fighter
 (find-file "d:/Development/version-control/GitHub/Tutorial-Mod/Roguelike_tutorial/SRC/components/fighter.py")
@@ -95,14 +144,11 @@ which virtualenv
 
 #+RESULTS:
 * new Fiches
-** ситадель из одной игры
-*** за рефакторить 
-**** убрать функцию ситадели
-**** разделения в менюс запуска  
-** добавить тесты
 ** сделать виртуал инворемнт
 *** научится запускать в нем прогу
-** переписать на основе патерна перышко
+** разобратся с ворнингами движка
+   новерное перейти на использование новых вункций
+** переписать на основе патерна легковесный
 *** работу тайлов на этот патерн
 *** план
 **** открыть сайт книги патерны програимрования игр
@@ -112,12 +158,26 @@ which virtualenv
 ** переписать на основе патерна команды
 *** работу кнопок
 *** и прямо там был прем управления юнитами без привязки
+** разобратся с мокингом тестинг
+https://realpython.com/python-testing/
 ** переключение игрового мира на основе скрола портала
 ** переделать в класы 
 *** систему ивентов
+** добавить потдержду ТК
+*** вы водить расширеные меседжи в лог
+*** возможность ввода команд
+*** все действия это команды повещегые на кнопки 
+посути это мад
+*** сделать из этого мад
+*** вывод в лог всех бросков
+**** с возможность открыть  окнай подробного расчёта
+	 ала ТОЕЕ
+** поэесперементировать с запуском
+Но вообще, если нужно больше контроля, то лучше конечно через call-process и start-process
 ** разобратся с на весь экран  
 как шрифт а не смена разрения
 ** dont now how to lunch in debuger
+** прочность предметов
 ** кирка для изменеия подземелия
 *** добытый материал можно сипользовать для постройки новых стен
 возможно понадобится для того новый инструмент мастерок?
@@ -141,6 +201,26 @@ which virtualenv
 **** востановление манны восне
 **** востановление манны с помошью кресталов в книге
 *** добовление крисалов в книгу длы подготовки заклятия
+** Оффлаин
+*** описание
+	всё строится вокруг многих чаров пока ты играешь другим чаром этот взависимости от настроек лагеря
+	растут бонусы отдыха для отдыхаюшего чара
+чар может поднять лагеро где угодно
+    также чар отдыхает пока игра выключена или искуственно вызван отдых
+	чары тратят припасы только если их бонусы не полны или есть работа которую нужно сделать
+но это всё определяятется лагерем
+чары онлаин могут взаимодействовать с чарами офлайин
+*** професия 
+**** если чар офлаин то он выполнят задачи  из своего меню
+**** также работает как непись принимая задания от других чаров 
+** бакстори
+*** обшаяся с другими  неписями
+ты отвечая на их вопросы расказываешь свою историю
+которая может преврашатся в реальные бонусы
+** присобачить 3д движок
+*** дегерфол лайк
+**** и двелвер
+**** и прочие
 * описание
 ** cooridors
 *** curved cooridors caves wallls 
@@ -570,4 +650,5 @@ echo $hello-world
 #+end_src
 #+RESULTS:
 : hello, world
+
 

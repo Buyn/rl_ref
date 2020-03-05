@@ -96,4 +96,3 @@ def load_citadel():#   {{{
         game_state = data_file['game_state']
     player = entities[player_index]
     return player, entities, game_map, message_log, game_state
-    #  }}}
